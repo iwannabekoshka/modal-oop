@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: monospace;
+    font-size: 2rem;
+
+    background-color: #eee;
+}
+.btn {
+    display: inline-block;
+
+    font-weight: bold;
+    letter-spacing: .1em;
+    color: white;
+    background-color: cornflowerblue;
+    border: none;
+    outline: none;
+
+    padding: 1em 2em;
+
+    cursor: pointer;
+    transition: .2s;
+}
+.btn:hover {
+    background-color: white;
+    color: cornflowerblue;
+}
+.btn-close {
+    border: none;
+    border-radius: 9999px;
+
+    font-size: 2em;
+    line-height: 1;
+    width: 1em;
+    height: 1em;
+
+    background-color: inherit;
+
+    cursor: pointer;
+    transition: .2s;
+}
+.btn-close:hover {
+    box-shadow: 0 3px 6px rgba(0,0,0, .3);
+}
+
+.modal,
+.modal-overlay {
+    opacity: 0;
+    z-index: -1;
+}
+
+.modal.open,
+.modal.open .modal-overlay {
+    opacity: 1;
+}
+
+.modal.open .modal-overlay {
+    z-index: 199;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(0,0,0, .5);
+}
+
+.modal.open {
+    z-index: 200;
+}
+
+.modal-window {
+    width: 80%;
+    max-width: 120rem;
+
+    background-color: white;
+    color: black;
+}
+
+.modal-window > * {
+    padding: 1em;
+}
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
