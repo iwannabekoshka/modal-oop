@@ -2,7 +2,7 @@ const btnModal = document.querySelector('#btn-modal');
 const btnAlert = document.querySelector('#btn-alert');
 
 const myModal = new Modal({
-    title: 'Koshka',
+    title: '',
     text: `
         <h1>HOHOHO</h1>
     `,

@@ -1,6 +1,6 @@
 class Modal {
 	constructor(obj) {
-		this.title = obj?.title;
+		this.title = obj.title;
 		this.text = obj.text;
 		this.buttons = obj.buttons;
 		this.width = obj.width;
@@ -22,7 +22,7 @@ class Modal {
 			<div class="modal-overlay" data-close="true">
 				<div class="modal-window" style="width: ${this.width}">
 					<div class="modal-header">
-						<span>${this.title}</span>
+						<span>${this.title || 'okoshe4ko'}</span>
 						<button class="btn-close" data-close="true">&times;</button>
 					</div>
 					<div class="modal-body">${this.text}</div>
