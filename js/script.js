@@ -1,13 +1,15 @@
-const btn = document.querySelector('.btn');
+const btnModal = document.querySelector('#btn-modal');
+const btnAlert = document.querySelector('#btn-alert');
 
 const myModal = new Modal({
     title: 'Koshka',
     text: 'some text',
+    width: '400px',
     buttons: [
         {
             text: 'Ok',
             action: function() {
-                console.log('ok')
+                this.close();
             }
         },
         {
@@ -16,6 +18,13 @@ const myModal = new Modal({
     ]
 });
 
-btn.addEventListener('click', function() {
+const myModalAlert = new ModalAlert({
+    text: 'AAAAAAAAAAAAAAAAAAAAa'
+})
+
+btnModal.addEventListener('click', function() {
     myModal.open();
+})
+btnAlert.addEventListener('click', function() {
+    myModalAlert.open();
 })

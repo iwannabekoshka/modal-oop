@@ -26,8 +26,7 @@ body {
     transition: .2s;
 }
 .btn:hover {
-    background-color: white;
-    color: cornflowerblue;
+    background-color: #558ae9;
 }
 .btn-close {
     border: none;
@@ -93,4 +92,13 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.btn-footer + .btn-footer {
+    margin-left: 1rem;
 }
