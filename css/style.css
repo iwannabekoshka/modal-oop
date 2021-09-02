@@ -28,6 +28,12 @@ body {
 .btn:hover {
     background-color: #558ae9;
 }
+.btn-alert {
+    background-color: salmon;
+}
+.btn-alert:hover {
+    background-color: #fa7363;
+}
 .btn-close {
     border: none;
     border-radius: 9999px;
@@ -37,12 +43,14 @@ body {
     width: 1em;
     height: 1em;
 
-    background-color: inherit;
+    background-color: salmon;
+    color: white;
 
     cursor: pointer;
-    transition: .2s;
+    transition: .4s;
 }
 .btn-close:hover {
+    background-color: #fa7363;
     box-shadow: 0 3px 6px rgba(0,0,0, .3);
 }
 
@@ -83,21 +91,29 @@ body {
 
     background-color: white;
     color: black;
+    box-shadow: 0 3px 6px rgba(0,0,0, .3);
 }
 
 .modal-window > * {
-    padding: 1em;
+    padding: 2rem;
 }
 .modal-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
 
+    border-bottom: 2px solid #eee;
+}
+.modal-body {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
 .modal-footer {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+
+    border-top: 2px solid #eee;
 }
 .btn-footer + .btn-footer {
     margin-left: 1rem;

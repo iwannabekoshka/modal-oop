@@ -10,7 +10,7 @@ class Modal {
 		const modal = this.#createModal();
 		this.#initEvents(modal);
 		document.body.appendChild(modal);
-		if (this.buttons) this.#appendFooter();
+		if (this.buttons && this.buttons.length > 0) this.#appendFooter();
 
 		return modal;
 	}
@@ -38,8 +38,16 @@ class Modal {
 
         this.buttons.forEach(btn => {
             const button = document.createElement('button');
+
             button.classList.add('btn');
             button.classList.add('btn-footer');
+
+            if (btn.classes && btn.classes.length > 0) {
+            	btn.classes.forEach(btnClass => {
+            		button.classList.add(btnClass);
+				});
+			}
+
             button.innerText = btn.text;
 
             const btnAction = btn.action?.bind(this);
@@ -70,14 +78,5 @@ class Modal {
 	close() {
 		this.modal.classList.remove('open');
 		this.modal.remove();
-	}
-}
-
-class ModalAlert extends Modal {
-	constructor(obj) {
-		super(obj);
-
-		this.title = 'Внимание!';
-		this.text = obj.text;
 	}
 }
